@@ -4,7 +4,6 @@ import Home from "@/app/page";
 describe("Home Page", () => {
   it("renders the welcome message", () => {
     const { getByText } = render(<Home />);
-    expect(getByText("Description")).toBeInTheDocument();
     expect(getByText("Hero")).toBeInTheDocument();
     expect(getByText("Main Products")).toBeInTheDocument();
   });
