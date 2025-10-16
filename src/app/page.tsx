@@ -1,3 +1,13 @@
+import { Description } from "@/components/home/Description";
+import { Hero } from "@/components/home/Hero";
+import { MainProducts } from "@/components/home/MainProducts";
+
 export default function Home() {
-  return <h1>Welcome to the Store</h1>;
+  return (
+    <div>
+      <Description />
+      <Hero />
+      <MainProducts />
+    </div>
+  );
 }
