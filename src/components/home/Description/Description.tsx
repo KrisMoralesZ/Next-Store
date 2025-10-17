@@ -32,8 +32,8 @@ const Description = () => {
       <div className={styles.Description_text}>
         <h2>Bring your future today</h2>
         <p>
-          Future World: Your Gateway to Tomorrow's Tech! Dive into a world of
-          cutting-edge gadgets and gear. Stay ahead of the curve and redefine
+          Future World: Your Gateway to Tomorrow&apos;s Tech! Dive into a world
+          of cutting-edge gadgets and gear. Stay ahead of the curve and redefine
           your digital lifestyle with us.
         </p>
       </div>
