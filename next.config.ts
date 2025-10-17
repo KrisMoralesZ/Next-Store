@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       @import "@/styles/mixins.scss";
     `,
   },
+  images: {
+    domains: ["cdn.shopify.com"],
+  },
 };
 
 export default nextConfig;
