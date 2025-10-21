@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getProducts } from "./request";
+import { getProducts } from "@/services/Products/request";
 import { IMainProducts } from "./utils";
 import styles from "./MainProducts.module.sass";
 

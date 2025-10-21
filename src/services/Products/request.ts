@@ -1,7 +1,7 @@
 export const getProducts = async () => {
   try {
     const response = await fetch(
-      `${process.env.SHOPIFY_HOSTNAME}/admin/api/2023-10/products.json`,
+      `${process.env.SHOPIFY_HOSTNAME}/admin/api/2025-10/products.json`,
       {
         headers: new Headers({
           "X-Shopify-Access-Token": process.env.SHOPIFY_ACCESS_TOKEN || "",

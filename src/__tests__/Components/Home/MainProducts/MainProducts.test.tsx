@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import MainProducts from "@/components/home/MainProducts/MainProducts";
-import { getProducts } from "@/components/home/MainProducts/request";
+import { getProducts } from "@/services/Products/request";
 
 interface IMockImageProps {
   src: string;
