@@ -12,7 +12,7 @@ export default function NotFound() {
         The page you are looking for does not exist.
       </p>
       <Link className={styles.NotFound__link} href="/store">
-        Let's go shopping!
+        Let&apos;s go shopping!
       </Link>
     </main>
   );
