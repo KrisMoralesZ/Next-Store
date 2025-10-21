@@ -2,7 +2,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import MainProducts from "@/components/home/MainProducts/MainProducts";
 import { getProducts } from "@/components/home/MainProducts/request";
 
-jest.mock("next/image", () => (props: any) => <img {...props} />);
+jest.mock("next/image", () => (props: any) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img {...props} />
+));
 
 // Mock the getProducts API call
 jest.mock("@/components/home/MainProducts/request", () => ({
