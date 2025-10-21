@@ -2,10 +2,22 @@ import { render, screen, waitFor } from "@testing-library/react";
 import MainProducts from "@/components/home/MainProducts/MainProducts";
 import { getProducts } from "@/components/home/MainProducts/request";
 
-jest.mock("next/image", () => (props: any) => (
-  // eslint-disable-next-line @next/next/no-img-element
-  <img {...props} />
-));
+interface IMockImageProps {
+  src: string;
+  alt?: string;
+  width?: number | string;
+  height?: number | string;
+}
+
+jest.mock("next/image", () => {
+  const MockNextImage = (props: IMockImageProps) => {
+    const { alt = "", ...rest } = props;
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img alt={alt} {...rest} />;
+  };
+  MockNextImage.displayName = "MockNextImage";
+  return MockNextImage;
+});
 
 // Mock the getProducts API call
 jest.mock("@/components/home/MainProducts/request", () => ({
