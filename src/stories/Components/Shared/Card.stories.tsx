@@ -27,7 +27,8 @@ type Story = {
 export const Default: Story = {
   args: {
     title: "Sample Card Title",
-    image: "https://via.placeholder.com/200",
+    image:
+      "https://img.freepik.com/free-photo/portrait-beautiful-purebred-pussycat-with-shorthair-orange-collar-neck-sitting-floor-reacting-camera-flash-scared-looking-light-indoor_8353-12551.jpg?semt=ais_hybrid&w=740&q=80",
     description: "This is a sample description for the card component.",
   },
 };
