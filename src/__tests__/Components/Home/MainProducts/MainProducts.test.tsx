@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import MainProducts from "@/components/home/MainProducts/MainProducts";
-import { getProducts } from "@/components/home/MainProducts/request";
+import { getProducts } from "@/services/Products/request";
 
 interface IMockImageProps {
   src: string;
@@ -20,7 +20,7 @@ jest.mock("next/image", () => {
 });
 
 // Mock the getProducts API call
-jest.mock("@/components/home/MainProducts/request", () => ({
+jest.mock("@/services/Products/request", () => ({
   getProducts: jest.fn(),
 }));
 
