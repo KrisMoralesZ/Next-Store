@@ -20,7 +20,7 @@ jest.mock("next/image", () => {
 });
 
 // Mock the getProducts API call
-jest.mock("@/components/home/MainProducts/request", () => ({
+jest.mock("@/services/Products/request", () => ({
   getProducts: jest.fn(),
 }));
 
