@@ -1,7 +1,7 @@
 import { Card } from "@/components/shared/Card";
 import { ProductsCollection } from "@/types/types";
 
-type Props = { products: any };
+type Props = { products: ProductsCollection[] };
 
 const CategoryCards = ({ products }: Props) => {
   return (
