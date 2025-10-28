@@ -12,6 +12,8 @@ const CategoryCards = ({ products }: Props) => {
             title={product.title}
             image={product.image?.src}
             description={product.body_html}
+            hasLink={true}
+            link={`/categories/${product.id}`}
           />
         </div>
       ))}
