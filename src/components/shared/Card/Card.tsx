@@ -1,5 +1,6 @@
-// src/components/shared/Card.tsx
 import React from "react";
+import Link from "next/link";
+import { SanitizeHTML } from "../SanitizeHTML";
 import styles from "./Card.module.sass";
 
 export interface CardProps {
@@ -8,6 +9,8 @@ export interface CardProps {
   description?: string;
   width?: number;
   height?: number;
+  hasLink?: boolean;
+  link?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,10 +19,18 @@ const Card: React.FC<CardProps> = ({
   description,
   width = 400,
   height = 250,
+  hasLink = false,
+  link = "#",
 }) => {
   return (
     <div className={styles.Card__Container}>
-      <h2 className={styles.Card__Header}>{title}</h2>
+      {hasLink ? (
+        <Link href={link} className={styles.Card__Link}>
+          <h2 className={styles.Card__Header}>{title}</h2>
+        </Link>
+      ) : (
+        <h2 className={styles.Card__Header}>{title}</h2>
+      )}
       <div className={styles.Card__Content}>
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -50,7 +61,7 @@ const Card: React.FC<CardProps> = ({
             No image
           </div>
         )}
-        <p>{description}</p>
+        <SanitizeHTML tag="div">{description || ""}</SanitizeHTML>
       </div>
     </div>
   );
