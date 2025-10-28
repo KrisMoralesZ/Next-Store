@@ -4,7 +4,6 @@ import styles from "./CategoriesList.module.sass";
 
 const CategoriesList = async () => {
   const categories = await getCollections();
-  console.log(categories);
 
   return (
     <div className={styles.CategoriesList__list}>

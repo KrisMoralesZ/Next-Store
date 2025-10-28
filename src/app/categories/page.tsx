@@ -7,7 +7,6 @@ import { Collection } from "@/types/types";
 
 const CategoriesPage = async () => {
   const { smart_collections } = await getCollections();
-  console.log("CategoriesPage categories:", smart_collections);
 
   const collectionsWithDetails = await Promise.all(
     smart_collections.map(async (collection: Collection) => {
@@ -15,8 +14,6 @@ const CategoriesPage = async () => {
       return { ...collection, ...details };
     })
   );
-
-  console.log("CategoriesPage collectionsWithDetails:", collectionsWithDetails);
 
   return <CategoriesCards categories={collectionsWithDetails} />;
 };
