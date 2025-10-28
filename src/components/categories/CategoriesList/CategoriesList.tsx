@@ -9,9 +9,9 @@ const CategoriesList = async () => {
     <div className={styles.CategoriesList__list}>
       {categories ? (
         categories.smart_collections.map(
-          (collection: { id: string; title: string }) => (
+          (collection: { id: string; title: string; handle: string }) => (
             <Link
-              href={`/categories/${collection.title}`}
+              href={`/categories/${collection.id}`}
               key={collection.id}
               className={styles.CategoriesList__link}
             >
