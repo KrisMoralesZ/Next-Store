@@ -13,7 +13,7 @@ const CategoryCards = ({ products }: Props) => {
             image={product.image?.src}
             description={product.body_html}
             hasLink={true}
-            link={`/categories/${product.id}`}
+            link={`/product/${product.id}`}
           />
         </div>
       ))}
