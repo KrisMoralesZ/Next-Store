@@ -9,6 +9,7 @@ jest.mock("@/services/Collections/request", () => ({
 
 // Mock next/link to avoid Next.js internals in tests
 jest.mock("next/link", () => {
+  // eslint-disable-next-line react/display-name
   return ({ href, children }: { href: string; children: React.ReactNode }) => (
     <a href={href}>{children}</a>
   );

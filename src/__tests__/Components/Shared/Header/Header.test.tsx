@@ -3,7 +3,16 @@ import { Header } from "@/components/shared/Header";
 
 // Mock next/link so it renders a normal <a> tag
 jest.mock("next/link", () => {
-  return ({ children, href, className }: any) => (
+  // eslint-disable-next-line react/display-name
+  return ({
+    children,
+    href,
+    className,
+  }: {
+    children: React.ReactNode;
+    href: string;
+    className?: string;
+  }) => (
     <a href={href} className={className}>
       {children}
     </a>
