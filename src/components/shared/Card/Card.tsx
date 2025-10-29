@@ -1,5 +1,5 @@
-// src/components/shared/Card.tsx
 import React from "react";
+import { SanitizeHTML } from "../SanitizeHTML";
 import styles from "./Card.module.sass";
 
 export interface CardProps {
@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({
             No image
           </div>
         )}
-        <p>{description}</p>
+        <SanitizeHTML tag="div">{description || ""}</SanitizeHTML>
       </div>
     </div>
   );
