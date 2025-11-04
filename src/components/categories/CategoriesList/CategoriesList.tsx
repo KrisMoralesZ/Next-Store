@@ -12,7 +12,7 @@ const CategoriesList = async () => {
       {list.length > 0 ? (
         list.map((collection: { id: string; title: string }) => (
           <Link
-            href={`/categories/${collection.title}`}
+            href={`/categories/${collection.id}`}
             key={collection.id}
             className={styles.CategoriesList__link}
           >
