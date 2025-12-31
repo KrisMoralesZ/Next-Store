@@ -2,14 +2,13 @@ import { ProductView } from "@/components/products/ProductView";
 import { getProducts } from "@/services/Products/request";
 
 interface ProductPageProps {
-  searchParams: {
+  params: {
     id: string;
   };
 }
 
-const ProductPage = async ({ searchParams }: ProductPageProps) => {
-  const params = await searchParams;
-  const id = params.id;
+const ProductPage = async ({ params }: ProductPageProps) => {
+  const { id } = params;
 
   const data = await getProducts(id);
   const product = data?.products?.[0];
