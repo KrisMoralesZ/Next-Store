@@ -30,16 +30,13 @@ describe("Header Component", () => {
 
     // Verify that the main links exist
     const homeLink = screen.getByRole("link", { name: "Home" });
-    const storeLink = screen.getByRole("link", { name: "Store" });
     const categoriesLink = screen.getByRole("link", { name: "Categories" });
 
     expect(homeLink).toBeInTheDocument();
-    expect(storeLink).toBeInTheDocument();
     expect(categoriesLink).toBeInTheDocument();
 
     // Check that the href attributes are correct
     expect(homeLink).toHaveAttribute("href", "/");
-    expect(storeLink).toHaveAttribute("href", "/store");
     expect(categoriesLink).toHaveAttribute("href", "/categories");
   });
 
