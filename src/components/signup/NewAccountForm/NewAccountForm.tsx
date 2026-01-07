@@ -1,5 +1,5 @@
 "use client";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import styles from "./NewAccountForm.module.sass";
 import { handleCreateUser } from "@/app/actions";
 
@@ -17,6 +17,10 @@ const NewAccountForm = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    setErrors([]);
+  }, []);
 
   return (
     <div className={styles.NewAccountForm}>

@@ -8,9 +8,6 @@ const Header = () => {
       <Link href="/" className={styles.Header__link}>
         Home
       </Link>
-      <Link href="/store" className={styles.Header__link}>
-        Store
-      </Link>
       <Link href="/categories" className={styles.Header__link}>
         Categories
       </Link>
